@@ -8,9 +8,8 @@
  */
 add_action('admin_menu', 'custom_menu');
 add_action('admin_menu', 'process_form_setting');
- 
-function custom_menu() { 
 
+function custom_menu() { 
 	add_menu_page( 
 		'Contact-Us', 
 		'Contact-Us', 
@@ -29,7 +28,6 @@ function process_form_setting()
 		update_option('cf-Email', sanitize_text_field($_POST['cf-Email']));
 		update_option('cf-Message', sanitize_text_field($_POST['cf-Message']));
 	}
-
 }
 function contact_form()
 {
@@ -47,5 +45,4 @@ function contact_form()
 </div>
 <?php
 }
-
 ?>
