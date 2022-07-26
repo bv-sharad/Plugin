@@ -17,7 +17,6 @@ function custom_menu() {
 		'menu_slug', 
 		'contact_form', 
 		'dashicons-media-spreadsheet' 
-
 	);
 }
 function process_form_setting()
