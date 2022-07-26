@@ -6,9 +6,9 @@
  * Description: Contact Form Plugin
  * Tags: contact-form, blogvault
  */
-
 add_action('admin_menu', 'custom_menu');
 add_action('admin_menu', 'process_form_setting');
+ 
 function custom_menu() { 
 
 	add_menu_page( 
@@ -23,7 +23,7 @@ function custom_menu() {
 }
 function process_form_setting()
 {
-	register_setting('sharad_option_group','sharad_option_name');
+	register_setting('contact_form_group','contact_form_name');
 	if(isset($_POST['action']) && current_user_can('manage_options')){
 		update_option('cf-Name', sanitize_text_field($_POST['cf-Name']));
 		update_option('cf-Email', sanitize_text_field($_POST['cf-Email']));
@@ -38,7 +38,7 @@ function contact_form()
 		<h1>Contact Form</h1>
 		<?php settings_errors(); ?>
 		<form action="options.php" method="post">
-		<?php settings_fields('sharad_option_group'); ?>
+		<?php settings_fields('contact_form_group'); ?>
 		<label for="">Name: <input type="text" name="cf-Name" pattern="[a-zA-Z ]+" required placeholder="your name"/></label></br>
 		<label for="">Email: <input type="email" name="cf-Email" required placeholder="abc@gmail.com"/></label></br>
 		<label for="">Message: <input type="text" name="cf-Message" required placeholder="Your message goes here"/></label></br>
