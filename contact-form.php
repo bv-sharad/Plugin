@@ -37,9 +37,9 @@ function contact_form()
 		<?php settings_errors(); ?>
 		<form action = "options.php" method = "post">
 		<?php settings_fields('contact_form_group'); ?>
-		<label for = "">Name: <input type = "text" name = "cf-Name" pattern = "[a-zA-Z ]+" required placeholder = "your name"/></label></br>
-		<label for = "">Email: <input type = "email" name = "cf-Email" required placeholder = "abc@gmail.com"/></label></br>
-		<label for = "">Message: <input type = "text" name = "cf-Message" required placeholder = "Your message goes here"/></label></br>
+		<label>Name: <input type = "text" name = "cf-Name" pattern = "[a-zA-Z ]+" required placeholder = "your name"/></label></br>
+		<label>Email: <input type = "email" name = "cf-Email" required placeholder = "abc@gmail.com"/></label></br>
+		<label>Message: <input type = "text" name = "cf-Message" required placeholder = "Your message goes here"/></label></br>
 		<input type = "submit" name = "cf-submitted" value = "Send"/>
 	</form>
 </div>
